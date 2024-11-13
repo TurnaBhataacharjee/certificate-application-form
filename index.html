@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JU Certificate Application Form</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: linear-gradient(rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)), url('https://source.unsplash.com/1600x900/?university,education');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        h2 {
+            color: #6a11cb;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        label {
+            font-weight: 600;
+            color: #444;
+        }
+        .form-control, .form-select {
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            transform: translateY(-2px);
+        }
+        .custom-input-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-control::placeholder {
+            color: #999;
+            font-weight: 300;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h2>JU Certificate Application Form</h2>
+    <form action="process_form.php" method="POST" id="certificateForm">
+        <div class="custom-input-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your Full Name" required>
+        </div>
+        <div class="custom-input-group">
+            <label for="guardianName">Guardian's Name</label>
+            <input type="text" class="form-control" id="guardianName" name="guardianName" placeholder="Guardian's Name" required>
+        </div>
+        <div class="custom-input-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+        </div>
+        <div class="custom-input-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="custom-input-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" name="address" rows="2" placeholder="Your Address" required></textarea>
+        </div>
+        <div class="row">
+            <div class="col-md-6 custom-input-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+            </div>
+            <div class="col-md-6 custom-input-group">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 custom-input-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Postal Code" required>
+            </div>
+            <div class="col-md-6 custom-input-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+            </div>
+        </div>
+        <div class="custom-input-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="custom-input-group">
+            <label for="courseName">Course Name</label>
+            <input type="text" class="form-control" id="courseName" name="courseName" placeholder="Course Name" required>
+        </div>
+        <div class="custom-input-group">
+            <label for="department">Department</label>
+            <input type="text" class="form-control" id="department" name="department" placeholder="Department" required>
+        </div>
+        <div class="row">
+            <div class="col-md-6 custom-input-group">
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" class="form-control" id="rollNumber" name="rollNumber" placeholder="Roll Number" required>
+            </div>
+            <div class="col-md-6 custom-input-group">
+                <label for="yearOfPassing">Year of Passing</label>
+                <input type="text" class="form-control" id="yearOfPassing" name="yearOfPassing" placeholder="Year of Passing" required>
+            </div>
+        </div>
+        <div class="custom-input-group">
+            <label for="certificateType">Certificate Type</label>
+            <select class="form-control" id="certificateType" name="certificateType" required>
+                <option value="">Select Certificate Type</option>
+                <option value="Provisional Certificate">Provisional Certificate</option>
+                <option value="Degree Certificate">Degree Certificate</option>
+                <option value="Mark Sheet">Mark Sheet</option>
+            </select>
+        </div>
+        <div class="custom-input-group">
+            <label for="reason">Reason</label>
+            <textarea class="form-control" id="reason" name="reason" rows="2" placeholder="Reason for Application" required></textarea>
+        </div>
+        <div class="custom-input-group">
+            <label for="copies">Number of Copies</label>
+            <input type="number" class="form-control" id="copies" name="copies" placeholder="No. of Copies" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
